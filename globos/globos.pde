@@ -1,6 +1,7 @@
 class Globo
 {
-  float x, y,vx,vy;
+  float x, y,vx,vy,ax,ay;
+  color c;
   Globo (float _x, float _y)
   {
    x=_x;
@@ -8,7 +9,7 @@ class Globo
    vx=random(-0.25,0.25);
    vy=random(-2,-0.5);
    ax=random(-0.1, 0.1);
-   ay=random(-0.2,-0.1);
+   ay=random(-0.2,-0.15);
    c = color(random(0,255),random(0,255),100);
   }
 
