@@ -7,17 +7,27 @@ class Globo
    y=_y; 
    vx=random(-0.25,0.25);
    vy=random(-2,-0.5);
+   ax=random(-0.1, 0.1);
+   ay=random(-0.2,-0.1);
+   c = color(random(0,255),random(0,255),100);
   }
 
   void update()
   {
     y+=vy;
     x+=vx;
+    vx+=ax;
+    vy+=ay;
   }
 
   void dibujate()
   {
-      ellipse(x,y,80,100);
+      fill(c);
+      rectMode(CENTER);
+      rect(x,y,80,100);
+      imageMode(CENTER);
+      
+      // ellipse(x,y,80,100);
   }
   
 }
